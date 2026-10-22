@@ -1,0 +1,12 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+html,body,#root{height:100%}
+body{@apply bg-bg text-ink font-sans;padding-top:env(safe-area-inset-top);-webkit-tap-highlight-color:transparent}
+@layer components{
+ .t{@apply font-cond font-semibold uppercase}
+ .lbl{@apply text-[11px] uppercase font-medium text-ink/60;letter-spacing:.12em}
+ .card{@apply relative border border-line bg-surf p-4}
+ .btn{@apply min-h-[44px] px-4 border border-ink bg-ink text-bg t tracking-wider}
+ .btn2{@apply min-h-[44px] px-4 border border-line bg-transparent t tracking-wider}
+ .inp{@apply w-full min-h-[44px] border border-line bg-bg px-3 outline-none focus:border-acc}
+ .chip{@apply inline-block px-2 py-0.5 bg-accl text-accd text-[11px] uppercase font-medium;letter-spacing:.12em}
+}
