@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js'
 import { get, set } from 'idb-keyval'
-export const sb = createClient(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_ANON_KEY, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } })
+export const sb = createClient('https://hnzxnmroevtufggxkllz.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhuenhubXJvZXZ0dWZnZ3hrbGx6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI2ODk5ODAsImV4cCI6MjEwODI2NTk4MH0.ehui8EDKJh2Bl6AFjHLRgFS69l1idzWjvdllKPpeGd8', { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } })
 export const gs = (n: number) => 'Gs. ' + Math.round(Number(n) || 0).toLocaleString('es-AR')
 export const uid = () => crypto.randomUUID()
 export const fdate = (d?: string) => d ? new Date(d + 'T12:00').toLocaleDateString('es-AR', { weekday: 'short', day: 'numeric', month: 'short' }) : 'Sin fecha'
