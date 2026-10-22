@@ -6,7 +6,6 @@ export const uid = () => crypto.randomUUID()
 export const fdate = (d?: string) => d ? new Date(d + 'T12:00').toLocaleDateString('es-AR', { weekday: 'short', day: 'numeric', month: 'short' }) : 'Sin fecha'
 export const daysTo = (d?: string) => d ? Math.ceil((new Date(d + 'T00:00').getTime() - Date.now()) / 864e5) : 0
 
-// Deudas simplificadas: saldo neto por persona + emparejamiento greedy (mínimo de transferencias)
 export function settle(expenses: any[]) {
   const bal: Record<string, number> = {}
   for (const e of expenses) {
